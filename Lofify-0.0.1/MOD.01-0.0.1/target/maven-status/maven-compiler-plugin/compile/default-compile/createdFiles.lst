@@ -1,0 +1,15 @@
+B1_06\Lofify\Servidor\Dominio\Cancion.class
+B1_06\Lofify\Servidor\Presentacion\IU_Servidor.class
+B1_06\Lofify\Servidor\Presentacion\pnlFormularioCancion.class
+B1_06\Lofify\Servidor\Presentacion\IU_Android.class
+B1_06\Lofify\Servidor\Dominio\Gestor_Remoto.class
+B1_06\Lofify\Servidor\Dominio\Gestor_Dominio.class
+B1_06\Lofify\Servidor\Presentacion\IU_IOS.class
+B1_06\Lofify\Servidor\Dominio\Artista.class
+B1_06\Lofify\Servidor\Presentacion\IU_Windows.class
+B1_06\Lofify\Servidor\Dominio\Usuario.class
+B1_06\Lofify\Servidor\Presentacion\IU_OSX.class
+B1_06\Lofify\Servidor\Presentacion\IU_Servidor$BtnAadirActionListener.class
+B1_06\Lofify\Servidor\Dominio\Album.class
+B1_06\Lofify\Servidor\Presentacion\IU_Servidor$1.class
+B1_06\Lofify\Servidor\Persistencia\Agente.class
