@@ -1,18 +1,30 @@
 package B1_06.Lofify.Servidor.Dominio;
 
+import java.util.LinkedList;
+
 public class Album {
 
+	private LinkedList<Cancion> canciones;
+	private Artista autor;
 	private String nombre;
 	private double precio;
 	private long id;
+	
+	public Album(){}
+	
+	public Album(Artista autor, String nombre, double precio) {
+		this.autor = autor;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.id = this.autor.hashCode()+this.nombre.hashCode();
+	}
 
 	public String getNombre() {
 		return this.nombre;
 	}
 
 	public Artista getAutor() {
-		// TODO - implement Album.getAutor
-		throw new UnsupportedOperationException();
+		return this.autor;
 	}
 
 	public double getPrecio() {
@@ -20,8 +32,11 @@ public class Album {
 	}
 
 	public long getID() {
-		// TODO - implement Album.getID
-		throw new UnsupportedOperationException();
+		return this.id;
+	}
+	
+	public void addCancion(Cancion c){
+		this.canciones.add(c);
 	}
 
 }

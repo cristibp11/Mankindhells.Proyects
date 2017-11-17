@@ -2,30 +2,29 @@ package B1_06.Lofify.Servidor.Persistencia;
 import java.sql.*;
 
 public class Agente {
+	
+	private static Connection conn;
 
-	private String rutaBDD;
-
-	public Agente getAgente() {
-		// TODO - implement Agente.getAgente
-		throw new UnsupportedOperationException();
+	public Agente() throws ClassNotFoundException, SQLException{
+		try{
+			if(conn==null){
+				Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+				conn = DriverManager.getConnection("jdbc:odbc:ruta_de_la_bdd");
+			}
+		}catch (NullPointerException npe){
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			conn = DriverManager.getConnection("jdbc:odbc:ruta_de_la_bdd");
+		}
 	}
 
-	/**
-	 * 
-	 * @param sql
-	 */
-	public PreparedStatement leer(String sql) {
-		// TODO - implement Agente.leer
-		throw new UnsupportedOperationException();
+	public ResultSet leer(String sql) throws SQLException {
+		PreparedStatement st = conn.prepareStatement(sql);
+		return st.executeQuery(sql);
 	}
 
-	/**
-	 * 
-	 * @param sql
-	 */
-	public int modificar(String sql) {
-		// TODO - implement Agente.modificar
-		throw new UnsupportedOperationException();
+	public int modificar(String sql) throws SQLException {
+		PreparedStatement st = conn.prepareStatement(sql);
+		return st.executeUpdate();
 	}
 
 }

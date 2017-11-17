@@ -1,27 +1,33 @@
 package B1_06.Lofify.Servidor.Dominio;
 
-import B1_06.Lofify.Servidor.Dominio.*;
-
 public class Cancion {
 
+	private Artista autor;
 	private String titulo;
 	private String metadatos;
 	private Album album;
 	private double precio;
 	private long id;
 
+	public Cancion(Artista autor, String titulo, String metadatos, Album album, double precio) {
+		this.autor = autor;
+		this.titulo = titulo;
+		this.metadatos = metadatos;
+		this.album = album;
+		this.precio = precio;
+		this.id = this.album.getID()+this.titulo.hashCode();
+	}
+
 	public String getTitulo() {
 		return this.titulo;
 	}
 
 	public Artista getAutor() {
-		// TODO - implement Cancion.getAutor
-		throw new UnsupportedOperationException();
+		return this.autor;
 	}
 
 	public String getMeta() {
-		// TODO - implement Cancion.getMeta
-		throw new UnsupportedOperationException();
+		return this.metadatos;
 	}
 
 	public Album getAlbum() {
@@ -33,26 +39,15 @@ public class Cancion {
 	}
 
 	public long getID() {
-		// TODO - implement Cancion.getID
-		throw new UnsupportedOperationException();
+		return this.id;
 	}
 
-	/**
-	 * 
-	 * @param p
-	 */
-	public Void setPrecio(double p) {
-		// TODO - implement Cancion.setPrecio
-		throw new UnsupportedOperationException();
+	public void setPrecio(double p) {
+		this.precio = p;
 	}
 
-	/**
-	 * 
-	 * @param s
-	 */
-	public Void setMetadatos(String s) {
-		// TODO - implement Cancion.setMetadatos
-		throw new UnsupportedOperationException();
+	public void setMetadatos(String s) {
+		this.metadatos = s;
 	}
 
 }
